@@ -1,0 +1,244 @@
+:root {
+  --color-dark: #333;
+  --color-light: #e9e9e9;
+  --color-white: #ffffff;
+  --color-accent: beige;
+  --spacing: clamp(1rem, -0.6rem + 2.6vw, 2rem);
+  --spacing-medium: calc(var(--spacing) / 2);
+  --border-width: 3px;
+  --border-color: var(--color-dark);
+  --border: var(--border-width) solid var(--border-color);
+  --transition-time: 0.3s;
+  --font-size-largest: clamp(2rem, -1.2rem + 5.34vw, 4rem);
+  --font-size-larger: clamp(1.75rem, -0.75rem + 3.33vw, 3rem);
+  --font-size-large: clamp(1.5rem, -0.451.5rem + 2vw, 2.25rem);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin-top: 0;
+}
+
+body {
+  margin: 0;
+  padding: var(--spacing);
+  line-height: 1.5;
+  font-family: sans-serif;
+  color: var(--color-dark);
+  background-color: var(--color-accent);
+}
+
+header,
+footer {
+  display: flex;
+  padding: var(--spacing);
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+header a,
+footer a {
+  color: var(--color-light);
+}
+
+header fieldset {
+  display: flex;
+  align-items: center;
+  margin-left: var(--spacing);
+  border: 0;
+  background-color: transparent;
+}
+
+header label,
+header input {
+  display: inline-block;
+  width: auto;
+}
+
+header [type="button"] {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  width: auto;
+  margin: 0 0 0 auto;
+  border-color: var(--color-light);
+}
+
+main {
+  padding: var(--spacing);
+  border: var(--border);
+  background-color: var(--color-white);
+}
+
+main > * {
+  max-width: 48rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+input,
+button,
+textarea {
+  transition: var(--transition-time);
+}
+
+blockquote {
+  padding: var(--spacing);
+  border-left: var(--border);
+}
+
+figure {
+  background-color: var(--color-accent);
+  border: var(--border);
+}
+
+figcaption {
+  padding: var(--spacing);
+}
+
+input,
+select,
+textarea,
+button {
+  font-size: 100%;
+}
+
+input + label {
+  margin-top: var(--spacing);
+}
+
+fieldset {
+  background-color: var(--color-accent);
+  border: var(--border);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+legend {
+  display: inline-block;
+  margin: var(--spacing-medium) 0;
+  padding: var(--spacing-medium);
+  border: var(--border);
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+textarea {
+  width: 100%;
+}
+
+footer p {
+  max-width: 768px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+input,
+select {
+  border: var(--border);
+  background-color: white;
+  width: 100%;
+  max-width: 100%;
+  padding: var(--spacing-medium);
+  font-size: 1rem;
+}
+
+select {
+  width: auto;
+}
+
+[type="button"],
+[type="submit"] {
+  padding: var(--spacing-medium) var(--spacing);
+  font-size: 1rem;
+  cursor: pointer;
+  border: var(--border);
+  border-color: var(--color-dark);
+  color: var(--color-dark);
+  border-radius: 50px;
+  background: transparent;
+  font-weight: 700;
+}
+
+[type="button"]:hover,
+[type="button"]:focus,
+[type="submit"]:hover,
+[type="submit"]:focus {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+[type="button"]:active {
+  transform: scale(0.99);
+}
+
+label {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+}
+
+label[for^="checkbox"],
+label[for^="radio"],
+input[name^="checkbox"],
+input[name^="radio"] {
+  width: auto;
+  margin-top: 0;
+  /* margin-left: var(--spacing-medium); */
+}
+
+label[for^="checkbox"],
+label[for^="radio"] {
+  margin-right: auto;
+}
+
+input[name^="checkbox"],
+input[name^="radio"] {
+  margin-right: var(--spacing-medium);
+}
+
+pre {
+  font-family: monospaced;
+}
+
+table {
+  text-align: left;
+  border: var(--border);
+  border-collapse: collapse;
+}
+th {
+  border-bottom: var(--border);
+  background-color: var(--color-accent);
+}
+tr > * {
+  padding: var(--spacing);
+}
+tr:nth-of-type(odd) {
+  background-color: var(--color-light);
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin-top: var(--spacing);
+  border: var(--border);
+}
+
+.taps {
+  line-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  font-weight: bold;
+}
