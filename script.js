@@ -37,6 +37,7 @@ function handleStart() {
     tapper.setAttribute("disabled", true);
     start.removeAttribute("disabled");
     clearInterval(startTimer);
+    timer.removeAttribute('data-time-left');
     time = 10;
     number = 0;
   }, 11000);
