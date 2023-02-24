@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Tapper</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+    content="Ever wanted to copy/paste sample HTML into your editor so you could check your default styles easily? Now you can!" />
+    <meta property="og:site_name" content="HTML Elements Sample" />
+    <meta property="og:url" content="https://elements.mark.ie" />
+    <meta property="og:title" content="HTML Elements Sample" />
+    <meta property="og:description"
+      content="Ever wanted to copy/paste sample HTML into your editor so you could check your default styles easily? Now you can!" />
+    <meta property="og:image" content="https://elements.mark.ie/assets/screenshot.jpg" />
+    <meta property="og:image:url" content="https://elements.mark.ie/assets/screenshot.jpg" />
+    <meta property="og:image:secure_url" content="https://elements.mark.ie/assets/screenshot.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@markconroy" />
+    <meta name="twitter:description"
+      content="Ever wanted to copy/paste sample HTML into your editor so you could check your default styles easily? Now you can!" />
+    <meta name="twitter:title" content="HTML Elements Sample" />
+    <meta name="twitter:creator" content="twitter.com/markconroy" />
+    <meta name="twitter:url" content="https://elements.mark.ie" />
+    <meta name="twitter:image" content="https://elements.mark.ie/assets/screenshot.jpg" />
+    <link rel="stylesheet" href="style.css">
+    <title>Tapper</title>
+  </head>
 <body>
   <header>
     <h1>Tapper</h1>
   </header>
   
   <main>
-    <p>How many times can you click on the square in 30 seconds?</p>
-    <div class="controls">
-      <button id="start" type="button">Start</button>
-      <div id="timer" class="timer">10</div>
-    </div>
-    <div id="square" class="square" disabled>
-      <span class="taps"></span>
+    <p>How many times can you click on the big square in 10 seconds?</p>
+    <div class="game">
+      <div class="controls">
+        <button id="start" type="button">Start</button>
+        <div class="controls__item controls__item--time">
+          <h2 class="controls__label">Time</h2>
+          <div id="timer" class="controls__detail controls__detail--timer">10</div>
+        </div>
+        <div class="controls__item controls__item--score">
+          <h2 class="controls__label">Score</h2>
+          <div id="score" class="controls__detail controls__detail--score"></div>
+        </div>
+      </div>
+      <button id="tapper" class="tapper" type="button" disabled aria-label="Click this tapper">
+      </button>
     </div>
   </main>
+
+  <footer>
+    <p>Created by <a href="https://mark.ie">Mark Conroy</a>. Code is available on <a href="https://github.com/markconroy/tapper">GitHub</a>.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
