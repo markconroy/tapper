@@ -141,10 +141,26 @@ footer p {
   border: var(--border);
 }
 
+@keyframes start {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.033);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 #start {
   margin-bottom: var(--spacing);
   background-color: var(--color-positive);
   color: var(--color-white);
+}
+
+.start--ready {
+  animation: start infinite 1s;
 }
 
 #start[disabled] {

@@ -21,6 +21,7 @@ function handleStart() {
   timer.setAttribute('data-time-left', 'lots');
   tapper.removeAttribute("disabled");
   start.setAttribute('disabled', true);
+  start.classList.remove('start--ready');
   startTimer = setInterval(() => {
     time = time - 1;
     timer.innerText = time;
@@ -36,6 +37,7 @@ function handleStart() {
   setTimeout(() => {
     tapper.setAttribute("disabled", true);
     start.removeAttribute("disabled");
+    start.classList.add('start--ready');
     clearInterval(startTimer);
     timer.removeAttribute('data-time-left');
     time = 10;
